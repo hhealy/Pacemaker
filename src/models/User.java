@@ -10,6 +10,9 @@ public class User
 	public String email;
 	public String password;
 	
+	static Long   counter = 0l;
+	public Long   id;
+	
 	public User()
 	{
 		
@@ -21,6 +24,7 @@ public class User
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
+		this.id        = counter++;
 	}
 	
 	  @Override  
@@ -32,10 +36,11 @@ public class User
 	  @Override
 	  public String toString()
 	  {
-	    return toStringHelper(this).addValue(firstName)
+	    return toStringHelper(this).addValue(id)
+	                               .addValue(firstName)
 	                               .addValue(lastName)
 	                               .addValue(password)
-	                               .addValue(email)                               
+	                               .addValue(email)
 	                               .toString();
 	  }
 }
