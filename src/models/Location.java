@@ -36,7 +36,6 @@ public class Location
   public int hashCode()  
   {  
      return Objects.hashCode(this.id, this.latitude, this.longitude);  
-<<<<<<< HEAD
   }
   
   @Override
@@ -53,7 +52,4 @@ public class Location
 		  return false;
 	  }
   }
-=======
-  } 
->>>>>>> refs/remotes/origin/master
 }
