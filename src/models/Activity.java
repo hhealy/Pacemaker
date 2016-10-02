@@ -46,6 +46,7 @@ public class Activity
   public int hashCode()  
   {  
      return Objects.hashCode(this.id, this.type, this.location, this.distance);  
+<<<<<<< HEAD
   }
   
   @Override
@@ -64,4 +65,7 @@ public class Activity
 		  return false;
 	  }
   }
+=======
+  } 
+>>>>>>> refs/remotes/origin/master
 }

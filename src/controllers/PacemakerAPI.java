@@ -53,6 +53,7 @@ public class PacemakerAPI
     emailIndex.remove(user.email);
   }
 
+<<<<<<< HEAD
   public Activity createActivity(Long id, String type, String location, double distance)
   {
     Activity activity = null;
@@ -64,6 +65,17 @@ public class PacemakerAPI
       activitiesIndex.put(activity.id, activity);
     }
     return activity;
+=======
+  public void createActivity(Long id, String type, String location, double distance)
+  {
+    Activity activity = new Activity (type, location, distance);
+    Optional<User> user = Optional.fromNullable(userIndex.get(id));
+    if (user.isPresent())
+    {
+      user.get().activities.put(activity.id, activity);
+      activitiesIndex.put(activity.id, activity);
+    }
+>>>>>>> refs/remotes/origin/master
   }
 
   public Activity getActivity (Long id)
