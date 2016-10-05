@@ -23,6 +23,6 @@ public class Main
 
 	  pacemakerAPI.deleteUser(homer.id);
 	  users = pacemakerAPI.getUsers();
-	  System.out.println(users);
+	  System.out.println(users);//FDSFSD
   }
 }
